@@ -18,7 +18,7 @@ Note:
    1. If there is an error with the  [downstream](http://jsonplaceholder.typicode.com) then that error will be propagated. This may occur when the ApiControllerIntegrationTest is run or when the API is being tested over curl.
    2. http timeout for external api requests is set to 10 seconds (see AppMain). 
    3. If one external API request fails then the entire API request fails. Partial responses or fallbacks  are not implemented.
-   4. This is for demonstration purposes only so is a local Threadpool is used instead of something more robust like a messaging system.
+   4. This is for demonstration purposes only so a local Threadpool is used instead of something more robust like a messaging system.
 
 
 ## Prequisites
