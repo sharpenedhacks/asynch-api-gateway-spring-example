@@ -11,14 +11,14 @@ The following 2 endpoints are be aggregated:
 
 The result is the same user Json but with an additional field that contains the list of posts.
         
-Implementation is based on Spring Boot's non-blocking IO with Google's Guava ListenableFuture preferred over the Spring equaivalent due to the better library support.
+Implementation is based on Spring Boot's non-blocking IO with Google's Guava ListenableFuture preferred over the Spring equivalent due to the better library support.
 
 Note: 
 
-   1. If there is an error with the [downstream](http://jsonplaceholder.typicode.com) api then that error will be propagated. This may occur when the ApiControllerIntegrationTest is run or when the API is being tested over curl.
-   2. http timeout for external api requests is set to 10 seconds (see AppMain). 
-   3. If one external API request fails then the entire API request fails. Partial responses or fallbacks  are not implemented.
-   4. This is for demonstration purposes only so a local Threadpool is used instead of something more robust like a messaging system.
+   1. If one external API request fails then the entire API request fails. Partial responses or fallbacks are not implemented.
+   2. If there is an error with the [downstream api](http://jsonplaceholder.typicode.com) then that error will be propagated. This may occur when the ApiControllerIntegrationTest is run or when the API is being tested over curl.
+   3. http timeout for external api requests is set to 10 seconds (see AppMain). 
+   4. This app is for demonstration purposes only so a local thread pool is used instead of something more robust like a messaging system.
 
 
 ## Prequisites
